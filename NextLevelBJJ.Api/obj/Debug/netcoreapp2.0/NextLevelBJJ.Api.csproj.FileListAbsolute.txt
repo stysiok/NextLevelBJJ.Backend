@@ -1,0 +1,11 @@
+C:\Users\stysi\Source\Repos\NextLevelBJJ.Backend\NextLevelBJJ.Api\bin\Debug\netcoreapp2.0\NextLevelBJJ.Api.deps.json
+C:\Users\stysi\Source\Repos\NextLevelBJJ.Backend\NextLevelBJJ.Api\bin\Debug\netcoreapp2.0\NextLevelBJJ.Api.runtimeconfig.json
+C:\Users\stysi\Source\Repos\NextLevelBJJ.Backend\NextLevelBJJ.Api\bin\Debug\netcoreapp2.0\NextLevelBJJ.Api.runtimeconfig.dev.json
+C:\Users\stysi\Source\Repos\NextLevelBJJ.Backend\NextLevelBJJ.Api\bin\Debug\netcoreapp2.0\NextLevelBJJ.Api.dll
+C:\Users\stysi\Source\Repos\NextLevelBJJ.Backend\NextLevelBJJ.Api\bin\Debug\netcoreapp2.0\NextLevelBJJ.Api.pdb
+C:\Users\stysi\Source\Repos\NextLevelBJJ.Backend\NextLevelBJJ.Api\obj\Debug\netcoreapp2.0\NextLevelBJJ.Api.csprojResolveAssemblyReference.cache
+C:\Users\stysi\Source\Repos\NextLevelBJJ.Backend\NextLevelBJJ.Api\obj\Debug\netcoreapp2.0\NextLevelBJJ.Api.csproj.CoreCompileInputs.cache
+C:\Users\stysi\Source\Repos\NextLevelBJJ.Backend\NextLevelBJJ.Api\obj\Debug\netcoreapp2.0\NextLevelBJJ.Api.AssemblyInfoInputs.cache
+C:\Users\stysi\Source\Repos\NextLevelBJJ.Backend\NextLevelBJJ.Api\obj\Debug\netcoreapp2.0\NextLevelBJJ.Api.AssemblyInfo.cs
+C:\Users\stysi\Source\Repos\NextLevelBJJ.Backend\NextLevelBJJ.Api\obj\Debug\netcoreapp2.0\NextLevelBJJ.Api.dll
+C:\Users\stysi\Source\Repos\NextLevelBJJ.Backend\NextLevelBJJ.Api\obj\Debug\netcoreapp2.0\NextLevelBJJ.Api.pdb
