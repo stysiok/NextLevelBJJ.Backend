@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "NextLevelBJJ.Data/1.0.0": {
+        "dependencies": {
+          "NextLevelBJJ.Core": "1.0.0"
+        },
         "runtime": {
           "NextLevelBJJ.Data.dll": {}
+        }
+      },
+      "NextLevelBJJ.Core/1.0.0": {
+        "runtime": {
+          "NextLevelBJJ.Core.dll": {}
         }
       }
     }
   },
   "libraries": {
     "NextLevelBJJ.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NextLevelBJJ.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

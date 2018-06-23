@@ -20,3 +20,8 @@ C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Api\obj\Debug\
 C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Api\obj\Debug\netcoreapp2.0\NextLevelBJJ.Api.AssemblyInfo.cs
 C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Api\obj\Debug\netcoreapp2.0\NextLevelBJJ.Api.dll
 C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Api\obj\Debug\netcoreapp2.0\NextLevelBJJ.Api.pdb
+C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Api\bin\Debug\netcoreapp2.0\NextLevelBJJ.Core.dll
+C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Api\bin\Debug\netcoreapp2.0\NextLevelBJJ.Data.dll
+C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Api\bin\Debug\netcoreapp2.0\NextLevelBJJ.Core.pdb
+C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Api\bin\Debug\netcoreapp2.0\NextLevelBJJ.Data.pdb
+C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Api\obj\Debug\netcoreapp2.0\NextLevelBJJ.Api.csproj.CopyComplete

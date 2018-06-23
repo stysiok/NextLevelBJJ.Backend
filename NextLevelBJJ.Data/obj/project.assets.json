@@ -196,6 +196,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "NextLevelBJJ.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/NextLevelBJJ.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NextLevelBJJ.Core.dll": {}
+        }
       }
     }
   },
@@ -656,11 +666,17 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "NextLevelBJJ.Core/1.0.0": {
+      "type": "project",
+      "path": "../NextLevelBJJ.Core/NextLevelBJJ.Core.csproj",
+      "msbuildProject": "../NextLevelBJJ.Core/NextLevelBJJ.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "NextLevelBJJ.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -695,7 +711,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Core\\NextLevelBJJ.Core.csproj": {
+              "projectPath": "C:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Core\\NextLevelBJJ.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
