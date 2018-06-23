@@ -12619,11 +12619,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Api\\NextLevelBJJ.Api.csproj",
+      "projectUniqueName": "C:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Api\\NextLevelBJJ.Api.csproj",
       "projectName": "NextLevelBJJ.Api",
-      "projectPath": "c:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Api\\NextLevelBJJ.Api.csproj",
+      "projectPath": "C:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Api\\NextLevelBJJ.Api.csproj",
       "packagesPath": "C:\\Users\\stysi\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Api\\obj\\",
+      "outputPath": "C:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
