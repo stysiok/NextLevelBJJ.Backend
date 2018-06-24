@@ -2,7 +2,7 @@ using System;
 
 namespace NextLevelBJJ.Core.Models
 {
-    public class UsersCompetitions
+    public class UserCompetitions
     {
         public Guid UserId { get; set; }
 

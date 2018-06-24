@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using NextLevelBJJ.Core.Logic;
 using NextLevelBJJ.Core.Models;
 
 namespace NextLevelBJJ.Data.InMemory
 {
-    public class UsersRepository
+    public class UserRepository : IUserRepository
     {
         private List<User> users = new List<User>()
         {
@@ -37,5 +40,21 @@ namespace NextLevelBJJ.Data.InMemory
                 CarnetId = Guid.Parse("2c65a289-28e7-4e3f-b074-5d8089f2a349")                
             }        
         };
+
+        public Task<User> GetUserByGuid(string userGuid)
+        {
+            Guid providedGuid;
+
+            try
+            {
+                providedGuid = Guid.Parse(userGuid);
+            }
+            catch(Exception ex)
+            {
+                
+            }
+
+            return Task.FromResult(users.FirstOrDefault(u => u.UserId.Equals(providedGuid)));
+        }
     }
 }

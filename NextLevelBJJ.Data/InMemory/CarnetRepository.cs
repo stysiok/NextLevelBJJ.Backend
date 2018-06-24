@@ -4,7 +4,7 @@ using NextLevelBJJ.Core.Models;
 
 namespace NextLevelBJJ.Data.InMemory
 {
-    public class CarnetsRepository
+    public class CarnetRepository
     {
         private List<Carnet> carnets = new List<Carnet>()
         {

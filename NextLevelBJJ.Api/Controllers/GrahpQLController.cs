@@ -2,13 +2,56 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GraphQL;
+using GraphQL.Types;
 using Microsoft.AspNetCore.Mvc;
+using NextLevelBJJ.Api.GraphQLClasses;
+using NextLevelBJJ.Data.InMemory;
 
 namespace NextLevelBJJ.Api.Controllers
 {
     [Route("graphql")]
     public class GraphQLController : Controller
     {
-        
+        private readonly GraphQLQuery graphQLQuery;
+        private readonly IDocumentExecuter documentExecuter;
+        private readonly ISchema schema;
+
+        public GraphQLController(GraphQLQuery GraphQLQuery, IDocumentExecuter DocumentExecuter, ISchema Schema)
+        {
+            graphQLQuery = GraphQLQuery;
+            documentExecuter = DocumentExecuter;
+            schema = Schema;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] GraphQLQuery query)
+        {
+            var executionOptions = new ExecutionOptions
+            {
+                Schema = schema,
+                Query = query.Query
+            };
+
+            var result = await documentExecuter
+                            .ExecuteAsync(executionOptions)
+                            .ConfigureAwait(false);
+
+            //var schema = new Schema { Query = new NextLevelBJJQuery(userRepository) };
+
+            //var result = await new DocumentExecuter().ExecuteAsync(x =>
+            //{
+            //    x.Schema = schema;
+            //    x.Query = query.Query;
+
+            //}).ConfigureAwait(false);
+
+            if (result.Errors?.Count > 0)
+            {
+                return BadRequest(result.Errors);
+            }
+
+            return Ok(result);
+        }
     }
 }

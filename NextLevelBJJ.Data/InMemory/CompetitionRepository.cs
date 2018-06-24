@@ -4,7 +4,7 @@ using NextLevelBJJ.Core.Models;
 
 namespace NextLevelBJJ.Data.InMemory
 {
-    public class CompetitionsRepository
+    public class CompetitionRepository
     {
         private List<Competition> competitions = new List<Competition>()
         {
@@ -14,7 +14,7 @@ namespace NextLevelBJJ.Data.InMemory
               CompetitionType = "Gi",
               Name = "Mistrzostwa Polski Gi Luboń 2018",
               Town = "Luboń",
-              DateAndTime = new DateTime(2018, 07, 28, 15, 00, 00)  
+              DateAndTime = new DateTime(2018, 07, 28, 15, 00, 00)
             },
             new Competition
             {
@@ -22,7 +22,7 @@ namespace NextLevelBJJ.Data.InMemory
               CompetitionType = "Adcc",
               Name = "Mistrzostwa Polski Adcc",
               Town = "Warszawa",
-              DateAndTime = new DateTime(2018, 07, 15, 10, 00, 00)  
+              DateAndTime = new DateTime(2018, 07, 15, 10, 00, 00)
             },
             new Competition
             {
@@ -30,7 +30,7 @@ namespace NextLevelBJJ.Data.InMemory
               CompetitionType = "No-Gi",
               Name = "Mistrzostwa Polski No-Gi Luboń 2018",
               Town = "Luboń",
-              DateAndTime = new DateTime(2018, 07, 26, 12, 00, 00)  
+              DateAndTime = new DateTime(2018, 07, 26, 12, 00, 00)
             },
             new Competition
             {
@@ -38,7 +38,7 @@ namespace NextLevelBJJ.Data.InMemory
               CompetitionType = "Gi i No-Gi",
               Name = "Next Level Cup",
               Town = "Opole",
-              DateAndTime = new DateTime(2018, 07, 15, 09, 30, 00)  
+              DateAndTime = new DateTime(2018, 07, 15, 09, 30, 00)
             },
             new Competition
             {
@@ -46,7 +46,7 @@ namespace NextLevelBJJ.Data.InMemory
               CompetitionType = "Gi",
               Name = "Mistrzostwa Akademickie",
               Town = "Poznań",
-              DateAndTime = new DateTime(2018, 07, 06, 11, 00, 00)  
+              DateAndTime = new DateTime(2018, 07, 06, 11, 00, 00)
             },
         };
 

@@ -3,7 +3,7 @@ using NextLevelBJJ.Core.Models;
 
 namespace NextLevelBJJ.Data.InMemory
 {
-    public class CarnetTypesRepository
+    public class CarnetTypeRepository
     {
         private List<CarnetType> carnetTypes = new List<CarnetType>()
         {

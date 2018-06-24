@@ -4,7 +4,7 @@ using NextLevelBJJ.Core.Models;
 
 namespace NextLevelBJJ.Data.InMemory
 {
-    public class PostsRepository
+    public class PostRepository
     {
         private List<Post> posts = new List<Post>()
         {
