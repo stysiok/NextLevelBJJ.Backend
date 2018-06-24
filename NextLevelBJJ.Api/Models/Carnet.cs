@@ -7,7 +7,9 @@ namespace NextLevelBJJ.Core.Api
     {
         public Guid CarnetId { get; set; }
 
-        public CarnetType CarnetType { get; set; }
+        public string Name { get; set; }
+
+        public int EntrenceAmount { get; set; }
 
         public int LeftEntrences { get; set; }
 

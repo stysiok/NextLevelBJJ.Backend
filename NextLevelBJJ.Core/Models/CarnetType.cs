@@ -8,6 +8,6 @@ namespace NextLevelBJJ.Core.Models
 
         public string CarnetName { get; set; }
 
-        public int EntrenceNumber { get; set; }
+        public int EntrenceAmount { get; set; }
     }
 }
