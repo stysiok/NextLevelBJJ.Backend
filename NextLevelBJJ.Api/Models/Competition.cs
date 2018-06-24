@@ -1,6 +1,6 @@
 using System;
 
-namespace NextLevelBJJ.Core.Models
+namespace NextLevelBJJ.Api.Models
 {
     public class Competition
     {

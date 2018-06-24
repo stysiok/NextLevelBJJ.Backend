@@ -1,6 +1,6 @@
 using System;
 
-namespace NextLevelBJJ.Core.Api
+namespace NextLevelBJJ.Api.Models
 {
     public class Post
     {

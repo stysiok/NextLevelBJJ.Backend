@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using NextLevelBJJ.Core.Models;
 
-namespace NextLevelBJJ.Core.Api
+namespace NextLevelBJJ.Api.Models
 {
     public class User
     {
