@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Data\\NextLevelBJJ.Data.csproj",
+      "projectUniqueName": "c:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Data\\NextLevelBJJ.Data.csproj",
       "projectName": "NextLevelBJJ.Data",
-      "projectPath": "C:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Data\\NextLevelBJJ.Data.csproj",
+      "projectPath": "c:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Data\\NextLevelBJJ.Data.csproj",
       "packagesPath": "C:\\Users\\stysi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Data\\obj\\",
+      "outputPath": "c:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -712,8 +712,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Core\\NextLevelBJJ.Core.csproj": {
-              "projectPath": "C:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Core\\NextLevelBJJ.Core.csproj"
+            "c:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Core\\NextLevelBJJ.Core.csproj": {
+              "projectPath": "c:\\Users\\stysi\\Documents\\GitHub\\NextLevelBJJ.Backend\\NextLevelBJJ.Core\\NextLevelBJJ.Core.csproj"
             }
           }
         }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using NextLevelBJJ.Core.Models;
+using System;
 
 namespace NextLevelBJJ.Core.Logic
 {
@@ -8,7 +9,11 @@ namespace NextLevelBJJ.Core.Logic
     {
         Task<Competition> Get(string competitionGuid);
 
-        Task<List<Competition>> GetCompetitionsForDate(string date);
+        Task<Competition> Get(Guid competitionGuid);
+
+        Task<List<Competition>> GetAll();
+
+        Task<List<Competition>> GetCompetitionsForDate(DateTime? date);
 
     }
 }

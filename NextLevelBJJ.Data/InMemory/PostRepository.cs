@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
 using NextLevelBJJ.Core.Models;
+using NextLevelBJJ.Core.Logic;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace NextLevelBJJ.Data.InMemory
 {
-    public class PostRepository
+    public class PostRepository : IPostRepository
     {
         private List<Post> posts = new List<Post>()
         {
@@ -31,5 +34,25 @@ namespace NextLevelBJJ.Data.InMemory
             },
         };
 
+        public Task<Post> Get(string postGuid)
+        {
+            Guid providedGuid;
+
+            try
+            {
+                providedGuid = Guid.Parse(postGuid);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return Task.FromResult(posts.FirstOrDefault(p => p.PostId.Equals(providedGuid)));
+        }
+
+        public Task<List<Post>> GetAll()
+        {
+            return Task.FromResult(posts);
+        }
     }
 }

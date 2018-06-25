@@ -32,6 +32,9 @@ namespace NextLevelBJJ.Api
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSingleton<ICarnetRepository, CarnetRepository>();
             services.AddSingleton<ICarnetTypeRepository, CarnetTypeRepository>();
+            services.AddSingleton<ICompetitionRepository, CompetitionRepository>();
+            services.AddSingleton<IUserCompetitionsRepository, UserCompetitionsRepository>();
+            services.AddSingleton<IPostRepository, PostRepository>();
 
             services.AddSingleton<CarnetType>();
             services.AddSingleton<CompetitionType>();

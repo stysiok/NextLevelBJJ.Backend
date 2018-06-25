@@ -14,8 +14,7 @@ namespace NextLevelBJJ.Api.Types
             Field(c => c.CompetitionType).Description("Type of the competition");
             Field(c => c.Town).Description("Town where the competition will be held");
             Field(c => c.DateAndTime).Description("Date and Time of the competition");
-            Field(c => c.NumberOfSignedUsers).Description("Amount of signed competitiors to the competition");
-            
+            Field(c => c.SingingInDate).Description("Date of signing in to the competition");
         }
     }
 }

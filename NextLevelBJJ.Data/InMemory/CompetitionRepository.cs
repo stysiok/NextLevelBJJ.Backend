@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
 using NextLevelBJJ.Core.Models;
+using NextLevelBJJ.Core.Logic;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace NextLevelBJJ.Data.InMemory
 {
-    public class CompetitionRepository
+    public class CompetitionRepository : ICompetitionRepository
     {
         private List<Competition> competitions = new List<Competition>()
         {
@@ -50,5 +53,24 @@ namespace NextLevelBJJ.Data.InMemory
             },
         };
 
+        public Task<Competition> Get(string competitionGuid)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Competition> Get(Guid competitionGuid)
+        {
+            return Task.FromResult(competitions.FirstOrDefault(c => c.CompetitionId.Equals(competitionGuid)));
+        }
+
+        public Task<List<Competition>> GetAll()
+        {
+            return Task.FromResult(competitions);
+        }
+
+        public Task<List<Competition>> GetCompetitionsForDate(DateTime? date)
+        {
+            return Task.FromResult(competitions.Where(c => c.DateAndTime.Date == date?.Date).ToList());
+        }
     }
 }

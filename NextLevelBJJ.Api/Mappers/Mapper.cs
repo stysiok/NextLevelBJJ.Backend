@@ -19,6 +19,31 @@ namespace NextLevelBJJ.Api.Mappers
             };
         }
 
+        public Post Map(Core.Models.Post post)
+        {
+            return new Post
+            {
+                PostId = post.PostId,
+                Title = post.Title,
+                Text = post.Text,
+                CreationDate = post.CreationDate
+            };
+        }
+
+        public List<Post> Map(List<Core.Models.Post> posts)
+        {
+            return posts.Select(post =>
+            {
+                return new Post
+                {
+                    PostId = post.PostId,
+                    Title = post.Title,
+                    Text = post.Text,
+                    CreationDate = post.CreationDate
+                };
+            }).ToList();
+        }
+
         public Carnet Map(Core.Models.Carnet carnet, Core.Models.CarnetType carnetType)
         {
             return new Carnet
@@ -31,6 +56,37 @@ namespace NextLevelBJJ.Api.Mappers
                 LastTraining = carnet.LastTraining,
 
             };
+        }
+
+        public List<Competition> Map(List<Core.Models.Competition> competitions, List<Core.Models.UserCompetitions> userCompetitions)
+        {
+            return competitions.Select(c =>
+            {
+                return new Competition
+                {
+                    CompetitionId = c.CompetitionId,
+                    CompetitionType = c.CompetitionType,
+                    DateAndTime = c.DateAndTime,
+                    Name = c.Name,
+                    Town = c.Town,
+                    SingingInDate = userCompetitions.FirstOrDefault(f => f.CompetitionId == c.CompetitionId).SigningDate
+                };
+            }).ToList();
+        }
+
+        public List<Competition> Map(List<Core.Models.Competition> competitions)
+        {
+            return competitions.Select(c =>
+            {
+                return new Competition
+                {
+                    CompetitionId = c.CompetitionId,
+                    CompetitionType = c.CompetitionType,
+                    DateAndTime = c.DateAndTime,
+                    Name = c.Name,
+                    Town = c.Town
+                };
+            }).ToList();
         }
     }
 }

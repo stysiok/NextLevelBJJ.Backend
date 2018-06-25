@@ -4,8 +4,8 @@ using NextLevelBJJ.Core.Models;
 
 namespace NextLevelBJJ.Core.Logic
 {
-    public interface IUserCompetitionRepository
+    public interface IUserCompetitionsRepository
     {
-        Task<List<Competition>> GetUserCompetitions(string userGuid);
+        Task<List<UserCompetitions>> GetUserCompetitions(string userGuid);
     }
 }

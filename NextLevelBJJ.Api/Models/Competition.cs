@@ -14,6 +14,6 @@ namespace NextLevelBJJ.Api.Models
 
         public string CompetitionType { get; set; }
 
-        public int NumberOfSignedUsers { get; set; }
+        public DateTime SingingInDate { get; set; }
     }
 }
