@@ -14,6 +14,7 @@ namespace NextLevelBJJ.Api.Types
             Field(c => c.EntrenceAmount).Description("Left amount of trainging entrence");
             Field(c => c.LastTraining).Description("Date of the last appearance on the mat");
             Field(c => c.ExpirationDate).Description("Date of the carnet expiration");
+            Field(c => c.LeftEntrences).Description("Left entrences on carnet");
         }
     }
 }

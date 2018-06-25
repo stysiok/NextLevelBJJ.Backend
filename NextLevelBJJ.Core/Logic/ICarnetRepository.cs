@@ -6,6 +6,6 @@ namespace NextLevelBJJ.Core.Logic
 {
     public interface ICarnetRepository
     {
-        Task<Carnet> GetUserCarnet(string userGuid);
+        Task<Carnet> GetUserCarnet(string carnetGuid);
     }
 }

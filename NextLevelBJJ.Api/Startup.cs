@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using GraphQL;
+﻿using GraphQL;
 using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using NextLevelBJJ.Api.GraphQLClasses;
 using NextLevelBJJ.Api.Types;
 using NextLevelBJJ.Core.Logic;
@@ -35,7 +29,9 @@ namespace NextLevelBJJ.Api
             services.AddSingleton<GraphQLQuery>();
             services.AddSingleton<NextLevelBJJQuery>();
 
-            services.AddSingleton<IUserRepository, UsersRepository>();
+            services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSingleton<ICarnetRepository, CarnetRepository>();
+            services.AddSingleton<ICarnetTypeRepository, CarnetTypeRepository>();
 
             services.AddSingleton<CarnetType>();
             services.AddSingleton<CompetitionType>();

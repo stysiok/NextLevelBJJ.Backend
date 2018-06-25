@@ -1,16 +1,19 @@
 using System;
 using GraphQL;
 using GraphQL.Types;
-using NextLevelBJJ.Api.Mappers;
 using NextLevelBJJ.Api.Types;
 using NextLevelBJJ.Core.Logic;
+using NextLevelBJJ.Api.Mappers;
+using NextLevelBJJ.Api.Models;
 
 namespace NextLevelBJJ.Api.GraphQLClasses
 {
     public class NextLevelBJJQuery : ObjectGraphType
     {
+        Mapper mapper;
         public NextLevelBJJQuery(IUserRepository userRepository)
         {
+            mapper = new Mapper();
             Name = "Query";
             Field<UserType>(
                 "user",
@@ -20,10 +23,10 @@ namespace NextLevelBJJ.Api.GraphQLClasses
                 resolve: ctx => {
                     var stringGuid = ctx.GetArgument<string>("guid");
                     var user = userRepository.GetUserByGuid(stringGuid);
-                    var mapper = new Mapper();
-                    var userMapped = mapper.Map(user.Result);
+                    
+                    var mapped = mapper.Map(user.Result);
 
-                    return userMapped;
+                    return mapped;
                 }
             );
         }

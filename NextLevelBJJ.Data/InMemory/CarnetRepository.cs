@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using NextLevelBJJ.Core.Logic;
 using NextLevelBJJ.Core.Models;
 
 namespace NextLevelBJJ.Data.InMemory
 {
-    public class CarnetRepository
+    public class CarnetRepository : ICarnetRepository
     {
         private List<Carnet> carnets = new List<Carnet>()
         {
@@ -42,5 +45,20 @@ namespace NextLevelBJJ.Data.InMemory
             },
         };
 
+        public Task<Carnet> GetUserCarnet(string carnetGuid)
+        {
+            Guid providedGuid;
+
+            try
+            {
+                providedGuid = Guid.Parse(carnetGuid);
+            }
+            catch(Exception ex)
+            {
+                
+            }
+
+            return Task.FromResult(carnets.FirstOrDefault(u => u.CarnetId.Equals(providedGuid)));
+        }
     }
 }
