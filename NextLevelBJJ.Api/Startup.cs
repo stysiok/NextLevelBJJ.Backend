@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NextLevelBJJ.Api.GraphQLClasses;
+using NextLevelBJJ.Api.GraphQLExtensions;
+using NextLevelBJJ.Api.InputTypes;
 using NextLevelBJJ.Api.Types;
 using NextLevelBJJ.Core.Logic;
 using NextLevelBJJ.Data.InMemory;
@@ -25,10 +27,16 @@ namespace NextLevelBJJ.Api
         {
             services.AddMvc();
 
+            //Main Graphql objs
             services.AddScoped<IDocumentExecuter, DocumentExecuter>();
             services.AddSingleton<GraphQLQuery>();
             services.AddSingleton<NextLevelBJJQuery>();
+            services.AddSingleton<NextLevelBJJMutation>();
 
+            //GraphQL extensions
+            services.AddSingleton<OriginalDateGraphType>();
+
+            //Repos
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSingleton<ICarnetRepository, CarnetRepository>();
             services.AddSingleton<ICarnetTypeRepository, CarnetTypeRepository>();
@@ -36,11 +44,16 @@ namespace NextLevelBJJ.Api
             services.AddSingleton<IUserCompetitionsRepository, UserCompetitionsRepository>();
             services.AddSingleton<IPostRepository, PostRepository>();
 
+            //Types
             services.AddSingleton<CarnetType>();
             services.AddSingleton<CompetitionType>();
             services.AddSingleton<PostType>();
             services.AddSingleton<UserType>();
 
+            //Input types
+            services.AddSingleton<CompetitionInputType>();
+
+            //Schema
             services.AddSingleton<ISchema>(x => new NextLevelBJJSchema(type => (GraphType)x.GetService(type)));
         }
 

@@ -9,6 +9,7 @@ namespace NextLevelBJJ.Api.GraphQLClasses
         public NextLevelBJJSchema(Func<Type, GraphType> resolve) : base(resolve)
         {
             Query = (NextLevelBJJQuery)resolve(typeof(NextLevelBJJQuery));
+            Mutation = (NextLevelBJJMutation)resolve(typeof(NextLevelBJJMutation));
         }
     }
 }

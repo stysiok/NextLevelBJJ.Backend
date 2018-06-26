@@ -53,6 +53,15 @@ namespace NextLevelBJJ.Data.InMemory
             },
         };
 
+        public Task<Competition> Add(Competition competition)
+        {
+            competition.CompetitionId = Guid.NewGuid();
+
+            competitions.Add(competition);
+
+            return Task.FromResult(competition);
+        }
+
         public Task<Competition> Get(string competitionGuid)
         {
             throw new NotImplementedException();
@@ -72,5 +81,7 @@ namespace NextLevelBJJ.Data.InMemory
         {
             return Task.FromResult(competitions.Where(c => c.DateAndTime.Date == date?.Date).ToList());
         }
+
+        
     }
 }

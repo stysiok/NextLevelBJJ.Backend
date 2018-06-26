@@ -7,6 +7,7 @@ using NextLevelBJJ.Api.Mappers;
 using NextLevelBJJ.Api.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using NextLevelBJJ.Api.GraphQLExtensions;
 
 namespace NextLevelBJJ.Api.GraphQLClasses
 {
@@ -69,7 +70,7 @@ namespace NextLevelBJJ.Api.GraphQLClasses
                 "competitions",
                 description: "Get all competitions",
                 arguments: new QueryArguments(
-                    new QueryArgument<DateGraphType>() { Name = "competitionDate", Description = "Starting date of the competition" }
+                    new QueryArgument<OriginalDateGraphType>() { Name = "competitionDate", Description = "Starting date of the competition" }
                 ),
                 resolve: ctx =>
                 {

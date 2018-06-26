@@ -15,5 +15,7 @@ namespace NextLevelBJJ.Core.Logic
 
         Task<List<Competition>> GetCompetitionsForDate(DateTime? date);
 
+        Task<Competition> Add(Competition competition);
+
     }
 }

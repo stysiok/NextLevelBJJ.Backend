@@ -30,21 +30,13 @@ namespace NextLevelBJJ.Api.Controllers
             var executionOptions = new ExecutionOptions
             {
                 Schema = schema,
-                Query = query.Query
+                Query = query.Query,
+                Inputs = query.Variables.ToInputs()
             };
 
             var result = await documentExecuter
                             .ExecuteAsync(executionOptions)
                             .ConfigureAwait(false);
-
-            //var schema = new Schema { Query = new NextLevelBJJQuery(userRepository) };
-
-            //var result = await new DocumentExecuter().ExecuteAsync(x =>
-            //{
-            //    x.Schema = schema;
-            //    x.Query = query.Query;
-
-            //}).ConfigureAwait(false);
 
             if (result.Errors?.Count > 0)
             {

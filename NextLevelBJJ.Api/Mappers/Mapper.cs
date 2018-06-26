@@ -1,4 +1,5 @@
-﻿using NextLevelBJJ.Api.Models;
+﻿using NextLevelBJJ.Api.InputModels;
+using NextLevelBJJ.Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -87,6 +88,29 @@ namespace NextLevelBJJ.Api.Mappers
                     Town = c.Town
                 };
             }).ToList();
+        }
+
+        public Competition Map(Core.Models.Competition competition)
+        {
+            return new Competition
+            {
+                CompetitionId = competition.CompetitionId,
+                CompetitionType = competition.CompetitionType,
+                DateAndTime = competition.DateAndTime,
+                Name = competition.Name,
+                Town = competition.Town
+            };
+        }
+
+        public Core.Models.Competition Map(CompetitionInput competition)
+        {
+            return new Core.Models.Competition
+            {
+                CompetitionType = competition.CompetitionType,
+                Name = competition.Name,
+                Town = competition.Town,
+                DateAndTime = competition.Date.Date + competition.Time.TimeOfDay
+            };
         }
     }
 }
