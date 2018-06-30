@@ -18,7 +18,6 @@ C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Data\obj\Debug
 C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Data\obj\Debug\netcoreapp2.0\NextLevelBJJ.Data.csproj.CopyComplete
 C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Data\obj\Debug\netcoreapp2.0\NextLevelBJJ.Data.dll
 C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Data\obj\Debug\netcoreapp2.0\NextLevelBJJ.Data.pdb
-C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Data\obj\Debug\netcoreapp2.0\NextLevelBJJ.Data.csprojResolveAssemblyReference.cache
 C:\Users\A662345\Downloads\NextLevelBJJ.Backend-master\NextLevelBJJ.Backend-master\NextLevelBJJ.Data\bin\Debug\netcoreapp2.0\NextLevelBJJ.Data.deps.json
 C:\Users\A662345\Downloads\NextLevelBJJ.Backend-master\NextLevelBJJ.Backend-master\NextLevelBJJ.Data\bin\Debug\netcoreapp2.0\NextLevelBJJ.Data.dll
 C:\Users\A662345\Downloads\NextLevelBJJ.Backend-master\NextLevelBJJ.Backend-master\NextLevelBJJ.Data\bin\Debug\netcoreapp2.0\NextLevelBJJ.Data.pdb
@@ -42,3 +41,4 @@ C:\Users\A662345\Desktop\NetCore\NextLevelBJJ.Backend-master\NextLevelBJJ.Backen
 C:\Users\A662345\Desktop\NetCore\NextLevelBJJ.Backend-master\NextLevelBJJ.Backend-master\NextLevelBJJ.Data\obj\Debug\netcoreapp2.0\NextLevelBJJ.Data.AssemblyInfo.cs
 C:\Users\A662345\Desktop\NetCore\NextLevelBJJ.Backend-master\NextLevelBJJ.Backend-master\NextLevelBJJ.Data\obj\Debug\netcoreapp2.0\NextLevelBJJ.Data.dll
 C:\Users\A662345\Desktop\NetCore\NextLevelBJJ.Backend-master\NextLevelBJJ.Backend-master\NextLevelBJJ.Data\obj\Debug\netcoreapp2.0\NextLevelBJJ.Data.pdb
+C:\Users\stysi\Documents\GitHub\NextLevelBJJ.Backend\NextLevelBJJ.Data\obj\Debug\netcoreapp2.0\NextLevelBJJ.Data.csprojAssemblyReference.cache

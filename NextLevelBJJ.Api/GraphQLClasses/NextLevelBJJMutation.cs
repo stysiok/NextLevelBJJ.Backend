@@ -5,7 +5,9 @@ using NextLevelBJJ.Api.Mappers;
 using NextLevelBJJ.Api.Models;
 using NextLevelBJJ.Api.Types;
 using NextLevelBJJ.Core.Logic;
+using System.IdentityModel.Tokens.Jwt;
 using System;
+using NextLevelBJJ.Api.GraphQLExtensions;
 
 namespace NextLevelBJJ.Api.GraphQLClasses
 {

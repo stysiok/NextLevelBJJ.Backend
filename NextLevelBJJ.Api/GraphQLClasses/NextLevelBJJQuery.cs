@@ -13,23 +13,39 @@ namespace NextLevelBJJ.Api.GraphQLClasses
 {
     public class NextLevelBJJQuery : ObjectGraphType
     {
-        Mapper mapper;
+        Mapper _mapper;
+        JwtFactory _jwtFactory;
         public NextLevelBJJQuery(IUserRepository userRepository, IPostRepository postRepository, ICompetitionRepository competitionRepository)
         {
-            mapper = new Mapper();
+            _mapper = new Mapper();
 
             Name = "Query";
+
+            Field<BooleanGraphType>(
+                "isTokenValid",
+                description: "asd das das",
+                arguments: new QueryArguments(
+                    new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "token", Description = "Your token" }
+                ),
+                resolve: ctx =>
+                {
+                    var ob = new JsonWebToken { JsonWebTokenId = Guid.NewGuid(), Token = "adsadsdaSDasd" };
+
+                    return ob;
+                });
+
             Field<UserType>(
                 "user",
                 description: "Get student in the Next Level BJJ club by his guid",
                 arguments: new QueryArguments(
                     new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "userGuid", Description = "Guid of the user" }
                 ),
-                resolve: ctx => {
+                resolve: ctx =>
+                {
                     var stringGuid = ctx.GetArgument<string>("userGuid");
                     var user = userRepository.GetUserByGuid(stringGuid);
-                    
-                    var mapped = mapper.Map(user.Result);
+
+                    var mapped = _mapper.Map(user.Result);
 
                     return mapped;
                 }
@@ -39,7 +55,7 @@ namespace NextLevelBJJ.Api.GraphQLClasses
                 "post",
                 description: "Get post by its guid",
                 arguments: new QueryArguments(
-                    new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "postGuid", Description = "Guid of the post"}          
+                    new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "postGuid", Description = "Guid of the post" }
                 ),
                 resolve: ctx =>
                 {
@@ -47,9 +63,10 @@ namespace NextLevelBJJ.Api.GraphQLClasses
 
                     var post = postRepository.Get(stringGuid);
 
-                    var mapped = mapper.Map(post.Result);
+                    var mapped = _mapper.Map(post.Result);
 
                     return mapped;
+
                 }
             );
 
@@ -60,7 +77,7 @@ namespace NextLevelBJJ.Api.GraphQLClasses
                 {
                     var posts = postRepository.GetAll();
 
-                    var mapped = mapper.Map(posts.Result);
+                    var mapped = _mapper.Map(posts.Result);
 
                     return mapped;
 
@@ -86,7 +103,7 @@ namespace NextLevelBJJ.Api.GraphQLClasses
                         competitions = competitionRepository.GetAll();
                     }
 
-                    var mapped = mapper.Map(competitions.Result);
+                    var mapped = _mapper.Map(competitions.Result);
 
                     return mapped;
                 });

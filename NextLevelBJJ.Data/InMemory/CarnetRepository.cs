@@ -45,20 +45,9 @@ namespace NextLevelBJJ.Data.InMemory
             },
         };
 
-        public Task<Carnet> GetUserCarnet(string carnetGuid)
+        public Task<Carnet> GetUserCarnet(Guid carnetGuid)
         {
-            Guid providedGuid;
-
-            try
-            {
-                providedGuid = Guid.Parse(carnetGuid);
-            }
-            catch(Exception ex)
-            {
-                
-            }
-
-            return Task.FromResult(carnets.FirstOrDefault(u => u.CarnetId.Equals(providedGuid)));
+            return Task.FromResult(carnets.FirstOrDefault(u => u.CarnetId.Equals(carnetGuid)));
         }
     }
 }

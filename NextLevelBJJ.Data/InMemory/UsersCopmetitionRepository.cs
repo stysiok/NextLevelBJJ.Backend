@@ -55,20 +55,9 @@ namespace NextLevelBJJ.Data.InMemory
             }
         };
 
-        public Task<List<UserCompetitions>> GetUserCompetitions(string userGuid)
+        public Task<List<UserCompetitions>> GetUserCompetitions(Guid userGuid)
         {
-            Guid providedGuid;
-
-            try
-            {
-                providedGuid = Guid.Parse(userGuid);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
-            return Task.FromResult(userCompetitions.Where(uc => uc.UserId.Equals(providedGuid)).ToList());
+            return Task.FromResult(userCompetitions.Where(uc => uc.UserId.Equals(userGuid)).ToList());
         }
     }
 }

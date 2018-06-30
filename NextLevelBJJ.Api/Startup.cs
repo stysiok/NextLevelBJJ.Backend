@@ -49,6 +49,7 @@ namespace NextLevelBJJ.Api
             services.AddSingleton<CompetitionType>();
             services.AddSingleton<PostType>();
             services.AddSingleton<UserType>();
+            services.AddSingleton<JsonWebTokenType>();
 
             //Input types
             services.AddSingleton<CompetitionInputType>();

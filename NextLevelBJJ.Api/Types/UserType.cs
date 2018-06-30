@@ -24,13 +24,9 @@ namespace NextLevelBJJ.Api.Types
             Field<CarnetType>(
                 "carnet",
                 description: "Get carnet assigned to the user",
-                arguments: new QueryArguments
-                {
-                    new QueryArgument<NonNullGraphType<StringGraphType>>{Name = "carnetGuid", Description = "Guid of the users carnet"}
-                },
                 resolve: ctx =>
                 {
-                    var guid = ctx.GetArgument<string>("carnetGuid");
+                    var guid = ctx.Source.CarnetId;
                     var carnet = carnetRepository.GetUserCarnet(guid).Result;
                     var carnetType = carnetTypeRepository.Get(carnet.CarnetTypeId).Result;
 
@@ -43,13 +39,9 @@ namespace NextLevelBJJ.Api.Types
             Field<ListGraphType<CompetitionType>>(
                 "competitions",
                 description: "Get competitions which user has been assigned to",
-                arguments: new QueryArguments
-                {
-                    new QueryArgument<NonNullGraphType<StringGraphType>>{Name = "userGuid", Description = "Guid of the user"}
-                },
                 resolve: ctx =>
                 {
-                    var guid = ctx.GetArgument<string>("userGuid");
+                    var guid = ctx.Source.UserId;
                     var competitionsToUser = userCompetitionRepository.GetUserCompetitions(guid).Result;
 
                     var competitions = competitionsToUser.Select(cg =>
