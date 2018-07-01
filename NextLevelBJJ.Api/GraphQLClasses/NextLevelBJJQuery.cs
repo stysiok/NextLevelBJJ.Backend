@@ -18,20 +18,21 @@ namespace NextLevelBJJ.Api.GraphQLClasses
         public NextLevelBJJQuery(IUserRepository userRepository, IPostRepository postRepository, ICompetitionRepository competitionRepository)
         {
             _mapper = new Mapper();
-
+            _jwtFactory = new JwtFactory();
             Name = "Query";
 
-            Field<BooleanGraphType>(
-                "isTokenValid",
-                description: "asd das das",
+            Field<JsonWebTokenType>(
+                "getToken",
+                description: "Get new token for provided carnetId",
                 arguments: new QueryArguments(
-                    new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "token", Description = "Your token" }
+                    new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "carnetId", Description = "Your carnet Id" }
                 ),
                 resolve: ctx =>
                 {
-                    var ob = new JsonWebToken { JsonWebTokenId = Guid.NewGuid(), Token = "adsadsdaSDasd" };
+                    var carnetId = ctx.GetArgument<string>("carnetId");
+                    var token = _jwtFactory.BuildToken(carnetId);
 
-                    return ob;
+                    return new JsonWebToken { Token = token };
                 });
 
             Field<UserType>(
