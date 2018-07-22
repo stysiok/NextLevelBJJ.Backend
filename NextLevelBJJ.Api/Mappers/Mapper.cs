@@ -25,9 +25,11 @@ namespace NextLevelBJJ.Api.Mappers
             return new Post
             {
                 PostId = post.PostId,
+                Author = post.Author,
                 Title = post.Title,
                 Text = post.Text,
-                CreationDate = post.CreationDate
+                CreationDate = post.CreationDate,
+                Image = post.Image
             };
         }
 
@@ -35,13 +37,7 @@ namespace NextLevelBJJ.Api.Mappers
         {
             return posts.Select(post =>
             {
-                return new Post
-                {
-                    PostId = post.PostId,
-                    Title = post.Title,
-                    Text = post.Text,
-                    CreationDate = post.CreationDate
-                };
+                return Map(post);
             }).ToList();
         }
 
